@@ -222,7 +222,7 @@ function renderHome(images, opts) {
 
   const heroSlides = hasSlides ? slides.map((img, i) => heroSlide(img, i, slides.length)).join('') : fallbackHero();
 
-  const controls = hasSlides
+  const controls = hasSlides && slides.length > 1
     ? `
         <button class="hero-arrow hero-arrow-prev" type="button" data-hero-prev aria-label="Previous slide">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 18l-6-6 6-6"/></svg>
@@ -296,7 +296,7 @@ function renderHome(images, opts) {
 
   <main id="main">
     <!-- ===================== HERO / SLIDESHOW ===================== -->
-    <section class="hero${hasSlides ? ' is-playing' : ''}" data-hero aria-roledescription="carousel" aria-label="Showcase highlights"${hasSlides ? '' : ' data-hero-static="true"'}>
+    <section class="hero${slides.length > 1 ? ' is-playing' : ''}" data-hero aria-roledescription="carousel" aria-label="Showcase highlights"${hasSlides ? '' : ' data-hero-static="true"'}>
       <div class="hero-track" data-hero-track>${heroSlides}
       </div>
 
