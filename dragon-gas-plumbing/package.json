@@ -1,0 +1,20 @@
+{
+  "name": "dragon-gas-plumbing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dragon Gas & Plumbing — one-page public website + simple image manager admin",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "reset-password": "node scripts/reset-password.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "compression": "^1.8.1",
+    "express": "^4.22.2",
+    "multer": "^1.4.4",
+    "sharp": "^0.35.4"
+  }
+}

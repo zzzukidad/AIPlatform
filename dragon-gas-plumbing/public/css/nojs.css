@@ -1,0 +1,11 @@
+/* Without JavaScript: reveal everything, hide slide-only affordances. */
+
+.reveal,
+.reveal-hero {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.hero-scroll {
+  display: none;
+}
